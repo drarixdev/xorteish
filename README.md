@@ -1,5 +1,8 @@
-# Xorteish
-It is a project in development that consists of a custom terminal with commands!
-More info when pre-alpha is released
+# Xorteish | Colaborate with us
+It is a project of a terminal with your ideas, it is in pre-alpha.
+
+## How do I send my ideas?
+Therefore there is no way to send ideas.
+
 
 -Drarix Developer
