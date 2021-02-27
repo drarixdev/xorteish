@@ -15,12 +15,17 @@
 ## Import
 import os
 import ctypes
+import time
+
 #import webbrowser
+
+
+
 
 ##Get User
 username = os.getlogin()
 
-#Prefix
+##Prefix
 #prefix = username+"/xsh>"
 prefix = "xsh>"
 
@@ -34,7 +39,7 @@ def art():
   / . \ |__| | | \ \  | |  | |____ _| |_ ____) | |  | |
  /_/ \_\____/|_|  \_\ |_|  |______|_____|_____/|_|  |_|
  
-by DrarixDev [github.com/drarixdev] - Pre-Alpha                                                    
+ ------------------- Pre-Alpha 1.1 --------------------                                                
                                                        
     """)
 
@@ -43,8 +48,8 @@ art()
 
 
 MessageBox = ctypes.windll.user32.MessageBoxW
-MessageBox(None, 'Welcome to XSH, put "help" to view the commands! \nGithub: https://github.com/drarixdev \nWebsite: https://drarixdev.github.io/en', 'Xorteish', 0x0 | 0 | 0x40)
-#webbrowser.open("https://drarixdev.github.io/en#xorteish")
+MessageBox(None, 'Welcome to XSH, put "help" to view the commands! \nGithub: https://github.com/drarixdev \nWebsite: https://drarixdev.github.io/xorteish', 'Xorteish', 0x0 | 0 | 0x40)
+#webbrowser.open("https://drarixdev.github.io/xorteish")
 ## prefix
 
 cmd = input(prefix)
@@ -61,6 +66,9 @@ while cmd != 1:
         clear
         start
         exit
+        credits
+        colaborate
+        updatelog
         """)
     elif cmd == 'makedir':
         print("Put the name of the directory")
@@ -128,8 +136,49 @@ while cmd != 1:
             print("file_created.look.")
         except:
             print("3rro3 pls try 4g41n ")
+    elif cmd == 'credits':  
+        try:
+        # credits
+
+            print("""
+            ------------------Credits-------------------
+            Programmer: Drarix (drarixdev.github.io)
+
+            Programming language: Python
+
+            Open-Source: github.com/drarixdev/xorteish
+            """) 
+        except:
+            print("Error to show credits")
+
+    elif cmd == 'colaborate':  
+        try:
+        # colaborate
+
+            print("""
+To collaborate you have to join our discord server!
+            discord.gg/PbeVbbJeE5
+            """) 
+        except:
+            print("Error to show discord")
+    elif cmd == 'updatelog':  
+        try:
+        # updatelog
+
+            print("""
+------Update Log Pre-Alpha 1.1------
+Added "credits" command
+Added "colaborate" command
+Added "updatelog" command
+
+            """) 
+        except:
+            print("Error to show updatelog")
     else:
         print("The command '",cmd,"' its incorrect")
+
+
+
 
     print()
  
