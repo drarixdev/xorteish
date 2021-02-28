@@ -20,7 +20,8 @@ import time
 #import webbrowser
 
 
-
+##set title
+os.system("title Xorteish Pre-Alpha 1.2")
 
 ##Get User
 username = os.getlogin()
@@ -39,9 +40,23 @@ def art():
   / . \ |__| | | \ \  | |  | |____ _| |_ ____) | |  | |
  /_/ \_\____/|_|  \_\ |_|  |______|_____|_____/|_|  |_|
  
- ------------------- Pre-Alpha 1.1 --------------------                                                
+ ------------------- Pre-Alpha 2 --------------------                                                
                                                        
     """)
+
+#UpdateLog
+def updatelog():
+    print("""
+------Update Log Pre-Alpha 2------
+Added "tasklist" command
+The title has changed
+Added "colorhacker" command
+Added "title" command
+Added "colornormal" command
+
+
+    """) 
+
 
 ## Load Menu
 art()
@@ -69,6 +84,10 @@ while cmd != 1:
         credits
         colaborate
         updatelog
+        tasklist
+        colorhacker
+        colornormal
+        title
         """)
     elif cmd == 'makedir':
         print("Put the name of the directory")
@@ -164,16 +183,42 @@ To collaborate you have to join our discord server!
     elif cmd == 'updatelog':  
         try:
         # updatelog
-
-            print("""
-------Update Log Pre-Alpha 1.1------
-Added "credits" command
-Added "colaborate" command
-Added "updatelog" command
-
-            """) 
+            updatelog()
         except:
             print("Error to show updatelog")
+
+    elif cmd == 'tasklist':  
+        try:
+        # tasklist
+
+            os.system("tasklist")
+        except:
+            print("Error to show tasklist")
+    elif cmd == 'colorhacker':  
+        try:
+        # tasklist
+
+            os.system("color a")
+        except:
+            print("Error to put color 'hacker'")
+    elif cmd == 'title':
+        print("Put the name of the title")
+        title = input("title>")
+        
+        try:
+        # change title
+
+            os.system("title "+title)
+            print("You have changed the title to '" ,title,  "'") 
+        except:
+            print("Error to change the title")
+    elif cmd == 'colornormal':  
+        try:
+        # colornormal
+
+            os.system("color f")
+        except:
+            print("Error to put color 'normal'")
     else:
         print("The command '",cmd,"' its incorrect")
 
